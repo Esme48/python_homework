@@ -9,3 +9,29 @@ def greet(name):
     return f"Hello, {name}!"
 
 print(greet("Henry"))
+
+#Task 3
+
+def calc(x,y, operation="multiply"):
+    if operation == "add":
+        return x+y
+    elif operation == "subtract":
+        return x-y
+    elif operation == "multiply":
+        try:
+            return x*y
+        except TypeError:
+            return "You can't multiply those values!"
+    elif operation == "divide":
+        try: 
+            return x/y
+        except ZeroDivisionError:
+            return "You can't divide by 0!"
+    elif operation == "modulo":
+        return x%y
+    elif operation == "int_divide":
+        return x//y
+    elif operation == "power":
+        return x**y
+    
+print(calc(1,5, "divide"))
