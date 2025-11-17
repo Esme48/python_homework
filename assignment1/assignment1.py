@@ -35,3 +35,17 @@ def calc(x,y, operation="multiply"):
         return x**y
     
 print(calc(1,5, "divide"))
+
+#Task 4
+
+def data_type_conversion(value, name="int"):
+    try:
+        if name == "int":
+            return int(value)
+        elif name == "float":
+            return float(value)
+        elif name == "str":
+            return str(value)
+    except Exception as e:
+        return f"You can't convert {value} into a {name}."
+
