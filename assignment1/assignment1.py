@@ -78,3 +78,42 @@ def repeat(string, count):
 
 #Task 7:  
 
+def student_scores(value, **kwargs):
+    if value == "best":
+        best = max(kwargs, key = kwargs.get)
+        return best
+    elif value == "mean":
+        average = sum(kwargs.values())/len(kwargs)
+        return average
+    
+#Task 8:
+
+def titleize(string):
+    small_values = ["a", "on", "an", "the", "of", "and", "is", "in"]
+    new_string = string.split()
+
+    for i, word in enumerate(new_string):
+        if i == 0 or i == len(new_string) - 1 or word.lower() not in small_values:
+            new_string[i] = word.capitalize()
+        else:
+            new_string[i] = word.lower()
+    
+    return " ".join(new_string)
+
+
+print(titleize("Welcome to my kitchen"))
+
+# Task 9:
+
+def hangman(secret, guess):
+    result = ""
+    for letter in secret:
+        if letter in guess:
+            result += letter
+        else:
+            result += "_"
+    return result
+
+
+print(hangman("Thank you for coming", "aing"))
+
