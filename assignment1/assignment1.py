@@ -128,12 +128,12 @@ def pig_latin(x):
     elif x.startswith(constants):
         return x + x[0] + "ay"
     elif x.startswith(qu):
-        return x + {qu}
+        return x + "qu"
     else:
         return x
 
     #print(check)
     #result = ""
 
-print(pig_latin("quapple"))
+print(pig_latin("bapple"))
     
