@@ -70,3 +70,11 @@ def grade(*args):
             return "F"
     except Exception as e:
         return "Invalid data was provided."
+    
+#Task 6: 
+
+def repeat(string, count):
+    return string*count
+
+#Task 7:  
+
