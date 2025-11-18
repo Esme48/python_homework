@@ -49,3 +49,24 @@ def data_type_conversion(value, name="int"):
     except Exception as e:
         return f"You can't convert {value} into a {name}."
 
+#Task 5
+
+def grade(*args):
+    try:
+        if len(args) == 0:
+            return "Invalid data was provided."
+        
+        avg = sum(args)/len(args)
+
+        if avg >= 90:
+            return "A"
+        elif avg >= 80:
+            return "B"
+        elif avg >= 70:
+            return "C"
+        elif avg >= 60:
+            return "D"
+        else:
+            return "F"
+    except Exception as e:
+        return "Invalid data was provided."
