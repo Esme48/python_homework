@@ -28,4 +28,16 @@ def column_index(string):
     return employees["fields"].index(string)
 
 employee_id_column = column_index("employee_id")
-print(employee_id_column)
+#print(employee_id_column)
+
+#Task   4
+
+def first_name(num):
+    call_column = employee_id_column(num)
+    return print(call_column['first_name'])
+
+result = first_name(1)
+print(result)
+
+
+
