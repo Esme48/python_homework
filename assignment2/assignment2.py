@@ -38,7 +38,15 @@ def first_name(num): #Defining the first_name function and it has parameter num
     return row[call_column] #Returns the 'first-name' of the row
     #When there are two brackets "something[a][b]" the operation acceses [a] first and then it retrieves [b] in [a]
 result = first_name(2)
-print(result)
+#print(result)
 
+#Task 5
 
+def employee_find(employee_id):
+    def employee_match(row):
+        return int(row[employee_id_column]) == employee_id
+    matches = list(filter(employee_match, employees["rows"]))
+    return print(matches)
+
+results_two = employee_find(2)
 
