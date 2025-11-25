@@ -54,3 +54,10 @@ results_two = employee_find(2)
 def employee_find_2(employee_id):
     matches = list(filter(lambda row : int(row[employee_id_column]) == employee_id , employees["rows"]))
     return matches
+
+#Task 7
+def sort_by_last_name():
+    sort_list = employees["rows"].sort(key = lambda row: )
+    print(sort_list)
+
+results_seven = sort_by_last_name()
