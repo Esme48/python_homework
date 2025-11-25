@@ -64,6 +64,6 @@ results_seven = sort_by_last_name()
 
 #Task 8                                                                                                                                                                             
 
-def employee_dict():
-    employee_dict = dict(zip(row[employees]))
+def employee_dict(row):
+    employee_dict = dict(zip(employees["fields"], row))
     return employee_dict
