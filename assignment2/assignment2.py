@@ -1,7 +1,8 @@
 import csv
 
 def read_employees():
-    employee_csv = {"fields": None, "rows": []}
+    employee_csv = {}
+    rows = []
 
     try:
         with open('../csv/employees.csv', 'r') as file:
@@ -9,11 +10,13 @@ def read_employees():
             employee_csv["fields"] = next(reader)
 
             for row in reader:
-                 employee_csv["rows"].append(row)
+                 rows.append(row)
+        
+        employee_csv["rows"] = rows
 
         return employee_csv
     except FileNotFoundError:
         print("The file was not found.")
 
-data = read_employees()
-print(data)
+employees = read_employees()
+print(employees)
