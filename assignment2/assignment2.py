@@ -25,7 +25,7 @@ employees = read_employees()
 #Task 3
 
 def column_index(string):
-    employees["fields"].index("first_name")
+    return employees["fields"].index(string)
 
 result = column_index("employee_id")
 print(result)
