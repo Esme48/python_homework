@@ -57,7 +57,7 @@ def employee_find_2(employee_id):
 
 #Task 7
 def sort_by_last_name():
-    employees["rows"].sort(key = lambda row: row[1])
+    employees["rows"].sort(key = lambda row: row[2])
     return employees["rows"]
 
 results_seven = sort_by_last_name()
