@@ -15,4 +15,5 @@ def read_employees():
     except FileNotFoundError:
         print("The file was not found.")
 
-read_employees()
+data = read_employees()
+print(data)
