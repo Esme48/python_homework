@@ -15,8 +15,8 @@ def read_employees():
         employee_csv["rows"] = rows
 
         return employee_csv
-    except FileNotFoundError:
-        print("The file was not found.")
+    except Exception as e:
+        print(f"An error occurred reading the file: {e}")
 
 employees = read_employees()
 print(employees)
