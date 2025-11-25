@@ -59,5 +59,11 @@ def employee_find_2(employee_id):
 def sort_by_last_name():
     employees["rows"].sort(key = lambda row: row[2])
     return employees["rows"]
-
+                                  
 results_seven = sort_by_last_name()
+
+#Task 8                                                                                                                                                                             
+
+def employee_dict():
+    employee_dict = dict(zip(row[employees]))
+    return employee_dict
