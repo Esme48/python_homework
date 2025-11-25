@@ -32,11 +32,12 @@ employee_id_column = column_index("employee_id")
 
 #Task   4
 
-def first_name(num):
-    call_column = employee_id_column(num)
-    return print(call_column['first_name'])
-
-result = first_name(1)
+def first_name(num): #Defining the first_name function and it has parameter num
+    call_column = column_index("first_name") #Calls the previous function and in the 'fields" looks up the 'first_name'
+    row = employees["rows"][num] #Inside employees from two previous functions, it looks through the rows and looks for the specific number
+    return row[call_column] #Returns the 'first-name' of the row
+    #When there are two brackets "something[a][b]" the operation acceses [a] first and then it retrieves [b] in [a]
+result = first_name(2)
 print(result)
 
 
