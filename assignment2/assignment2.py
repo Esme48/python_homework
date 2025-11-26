@@ -73,7 +73,10 @@ result_eight = print(employee_dict(employees["rows"][5]))
 # Task 9
 
 def all_employees_dict():
-    employees_dict = dict(zip(employees["fields"]["employee_id"]))
-    return employees_dict
+    employees_dict = {}
+    for rows in employees["rows"]:
+        print(rows)
 
-result_nine = all_employees_dict(employees["rows"])
+
+result_nine = all_employees_dict()
+print(result_nine)
