@@ -147,5 +147,8 @@ minutes_set = create_minutes_set()
 
 def create_minutes_list():
     minutes_list = list(minutes_set)
-    ready_values = tuple(map(lambda x: (x[0], datetime.strptime(x[1], "%B %d, %Y")) ))
+    ready_values = tuple(map(lambda x: (x[0], datetime.strptime(x[1], "%B %d, %Y")), minutes_list ))
+    return ready_values
 
+minutes_list = create_minutes_list()
+print(minutes_list)
