@@ -1,5 +1,6 @@
 import os
 import csv
+import custom_module
 
 # Task 2
 def read_employees():
@@ -89,3 +90,11 @@ print(result_nine)
 def get_this_value():
     env_variable = os.getenv('THISVALUE')
     return env_variable
+
+#Task 11
+
+def set_that_secret(new_secret_to_set):
+    secret = custom_module.set_secret(new_secret_to_set)
+
+result = set_that_secret("welcome")
+print(custom_module.secret)
