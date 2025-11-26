@@ -133,8 +133,10 @@ print(minutes2)
 # Task 13
 
 def create_minutes_set():
-    set_minutes1 = set(minutes1)
-    set_minutes2 = set(minutes2)
+    rows1 = minutes1["rows"]
+    rows2 = minutes2["rows"]
+    set_minutes1 = set(rows1)
+    set_minutes2 = set(rows2)
     union_set = set_minutes1.union(set_minutes2)
     return union_set
 
