@@ -1,3 +1,4 @@
+import os
 import csv
 
 # Task 2
@@ -82,3 +83,9 @@ def all_employees_dict():
 
 result_nine = all_employees_dict()
 print(result_nine)
+
+#Task 10
+
+def get_this_value():
+    env_variable = os.getenv('THISVALUE')
+    return env_variable
