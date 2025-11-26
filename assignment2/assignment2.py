@@ -112,7 +112,7 @@ def read_minutes():
             for row in reader:
                 rows1.append(tuple(row))
         
-    minutes1["rows1"] = rows1
+    minutes1["rows"] = rows1
     
     with open('../csv/minutes2.csv', 'r') as file:
             reader = csv.reader(file)
@@ -121,7 +121,12 @@ def read_minutes():
             for row in reader:
                 rows2.append(tuple(row))
         
-    minutes2["rows2"] = rows2
+    minutes2["rows"] = rows2
     
     return minutes1, minutes2
+
+#result_twelve = read_minutes()
+minutes1, minutes2 = read_minutes()
+print(minutes1)
+print(minutes2)
 
