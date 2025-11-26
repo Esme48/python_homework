@@ -1,6 +1,7 @@
 import os
 import csv
 import custom_module
+from datetime import datetime
 
 # Task 2
 def read_employees():
@@ -141,4 +142,10 @@ def create_minutes_set():
     return union_set
 
 minutes_set = create_minutes_set()
+
+# Task 14
+
+def create_minutes_list():
+    minutes_list = list(minutes_set)
+    ready_values = tuple(map(lambda x: (x[0], datetime.strptime(x[1], "%B %d, %Y")) ))
 
