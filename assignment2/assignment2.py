@@ -75,7 +75,9 @@ result_eight = print(employee_dict(employees["rows"][5]))
 def all_employees_dict():
     employees_dict = {}
     for rows in employees["rows"]:
-        print(rows)
+        employee_id = rows[0]
+        employees_dict[employee_id] = employee_dict(rows)
+    return employees_dict
 
 
 result_nine = all_employees_dict()
