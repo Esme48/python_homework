@@ -98,3 +98,30 @@ def set_that_secret(new_secret_to_set):
 
 result = set_that_secret("welcome")
 print(custom_module.secret)
+
+# Task 12
+def read_minutes():
+    minutes1 = {}
+    rows1 = []
+    minutes2 = {}
+    rows2 = []
+    with open('../csv/minutes1.csv', 'r') as file:
+            reader = csv.reader(file)
+            minutes1["fields"] = next(reader)
+
+            for row in reader:
+                rows1.append(tuple(row))
+        
+    minutes1["rows1"] = rows1
+    
+    with open('../csv/minutes2.csv', 'r') as file:
+            reader = csv.reader(file)
+            minutes2["fields"] = next(reader)
+
+            for row in reader:
+                rows2.append(tuple(row))
+        
+    minutes2["rows2"] = rows2
+    
+    return minutes1, minutes2
+
