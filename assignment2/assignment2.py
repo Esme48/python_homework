@@ -152,3 +152,16 @@ def create_minutes_list():
 
 minutes_list = create_minutes_list()
 print(minutes_list)
+
+# Task 15
+
+def write_sorted_list():
+    minutes_list.sort(key=lambda row: row[1])
+    tuples_convert = list(map(lambda row: (row[0], row[1].strftime("%B %d, %y")), minutes_list))
+
+    with open('./minutes.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(minutes1["fields"])
+        writer.writerow(tuples_convert)
+
+    return tuples_convert
