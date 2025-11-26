@@ -130,3 +130,13 @@ minutes1, minutes2 = read_minutes()
 print(minutes1)
 print(minutes2)
 
+# Task 13
+
+def create_minutes_set():
+    set_minutes1 = set(minutes1)
+    set_minutes2 = set(minutes2)
+    union_set = set_minutes1.union(set_minutes2)
+    return union_set
+
+minutes_set = create_minutes_set()
+
