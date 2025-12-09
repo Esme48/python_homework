@@ -7,7 +7,7 @@ def logger_decorator(func):
         logger = logging.getLogger(func.__name__ + "_parameter_log")
         logger.setLevel(logging.INFO)
         logger.addHandler(logging.FileHandler("./decorator.log", "a"))
-        print(f"function {func.__name__}")
+        print(f"function: {func.__name__}")
         result = func(*args, **kwargs)
         return result
     return wrapper
