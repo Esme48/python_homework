@@ -9,7 +9,7 @@ def logger_decorator(func):
             logger.setLevel(logging.INFO)
             logger.addHandler(logging.FileHandler("./decorator.log", "a"))
         logger.info(f"function: {func.__name__}, positional parameters: {args}, keyword parameters: {kwargs}")
-        print(f"function: {func.__name__}, positional parameters")
+        #print(f"function: {func.__name__}, positional parameters")
         result = func(*args, **kwargs)
         return result
     return wrapper
@@ -20,12 +20,12 @@ def string_func():
 
 @logger_decorator
 def positional_func(*args):
-    print(f"positional parameters: {args}")
+    #print(f"positional parameters: {args}")
     return True
 
 @logger_decorator
 def other_func(**kwargs):
-    print(f"keyword parameters: {kwargs}")
+    #print(f"keyword parameters: {kwargs}")
     return logger_decorator
 
 string_func()
