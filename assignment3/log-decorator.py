@@ -18,10 +18,12 @@ def logger_decorator(func):
 def string_func():
     print("Hello, World!")
 
+@logger_decorator
 def positional_func(*args):
     print(f"positional parameters: {args}")
     return True
 
+@logger_decorator
 def other_func(**kwargs):
     print(f"keyword parameters: {kwargs}")
     return logger_decorator
