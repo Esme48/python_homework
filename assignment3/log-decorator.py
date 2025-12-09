@@ -14,7 +14,7 @@ def logger_decorator(func):
 
 @logger_decorator
 def string_func():
-    return "Hello,World!"
+    print("Hello, World!")
 
 def positional_func(name, year):
     print(f"positional parameters: {name},{year}")
