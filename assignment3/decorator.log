@@ -1,0 +1,2 @@
+function: {func.__name__}, positional parameters: {args}, keyword parameters: {kwargs}
+function: string_func, positional parameters: (), keyword parameters: {}

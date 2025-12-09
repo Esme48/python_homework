@@ -5,9 +5,11 @@ logging.basicConfig(level=logging.DEBUG)
 def logger_decorator(func):
     def wrapper(*args, **kwargs):
         logger = logging.getLogger(func.__name__ + "_parameter_log")
-        logger.setLevel(logging.INFO)
-        logger.addHandler(logging.FileHandler("./decorator.log", "a"))
-        print(f"function: {func.__name__}")
+        if not logger.handlers:
+            logger.setLevel(logging.INFO)
+            logger.addHandler(logging.FileHandler("./decorator.log", "a"))
+        logger.info(f"function: {func.__name__}, positional parameters: {args}, keyword parameters: {kwargs}")
+        print(f"function: {func.__name__}, positional parameters")
         result = func(*args, **kwargs)
         return result
     return wrapper
