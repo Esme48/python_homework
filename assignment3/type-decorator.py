@@ -11,8 +11,8 @@ def type_converter(type_of_output):
 def return_int():
     return 5
 
-@type_converter()
-def return_string(int):
+@type_converter(int)
+def return_string():
     return "not a number"
 
 y = return_int()
