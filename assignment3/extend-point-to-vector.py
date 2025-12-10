@@ -20,6 +20,24 @@ class Point:
         distance = np.linalg.norm(vector_value)
         return distance
 
+class Vector(Point):
+
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __str__(self):
+        return f"({self.x}, {self.y}, {self.z})"
+    
+    def euclidean(self, other):
+        v_one = np.array([self.x, self.y, self.z])
+        v_two = np.array([other.x, other.y, other.z])
+        vector_value = v_two - v_one
+        distance = np.linalg.norm(vector_value)
+        return distance
+
+#point
 point_one = Point(1,2)
 point_two = Point(1,2)
 
@@ -29,6 +47,18 @@ print(point_two)
 print(point_one == point_two)
 
 print(point_one.euclidean(point_two))
+
+#vector
+
+vector_one = Vector([1, 2, 3])
+vector_two = Vector([2, 4, 6])
+
+print(vector_one)
+print(vector_two)
+
+print(vector_one == vector_two)
+
+print(vector_one.euclidean(vector_two))
 
 
 
