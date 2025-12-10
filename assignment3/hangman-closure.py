@@ -16,12 +16,7 @@ hang_man = make_hangman(secret_value)
 
 while True:
     letter_value = input("What is your letter guess:").lower()
-    hang_man(letter_value)
+    print(hang_man(letter_value))
 
-
-        # if letter in secret_word:
-        #     print("You guessed a letter!")
-        # else:
-        #     print("Please try again!")
     
 
