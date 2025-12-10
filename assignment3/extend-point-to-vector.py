@@ -24,9 +24,9 @@ class Vector(Point):
 
 
     def __str__(self):
-        return f"({self.x}, {self.y}, {self.z})"
+        return f"<{self.x}, {self.y}>"
     
-    def euclidean(self, other):
+    def __add__(self, other):
         v_one = np.array([self.x, self.y, self.z])
         v_two = np.array([other.x, other.y, other.z])
         vector_value = v_two - v_one
