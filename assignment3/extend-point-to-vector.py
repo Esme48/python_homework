@@ -27,11 +27,7 @@ class Vector(Point):
         return f"<{self.x}, {self.y}>"
     
     def __add__(self, other):
-        v_one = np.array([self.x, self.y, self.z])
-        v_two = np.array([other.x, other.y, other.z])
-        vector_value = v_two - v_one
-        distance = np.linalg.norm(vector_value)
-        return distance
+        return Vector(self.x + other.x, self.y + other.y)
 
 #point
 point_one = Point(1,2)
@@ -46,15 +42,15 @@ print(point_one.euclidean(point_two))
 
 #vector
 
-vector_one = Vector(1, 2, 3)
-vector_two = Vector(1, 2, 3)
+vector_one = Vector(1, 2)
+vector_two = Vector(1, 2)
 
 print(vector_one)
 print(vector_two)
 
 print(vector_one == vector_two)
 
-print(vector_one.euclidean(vector_two))
+print(vector_one + vector_two)
 
 
 
