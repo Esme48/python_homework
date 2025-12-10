@@ -50,8 +50,8 @@ print(point_one.euclidean(point_two))
 
 #vector
 
-vector_one = Vector([1, 2, 3])
-vector_two = Vector([2, 4, 6])
+vector_one = Vector(1, 2, 3)
+vector_two = Vector(1, 2, 3)
 
 print(vector_one)
 print(vector_two)
