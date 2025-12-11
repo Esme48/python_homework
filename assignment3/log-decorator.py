@@ -31,3 +31,6 @@ def other_func(**kwargs):
 string_func()
 positional_func("Iris", 3)
 other_func(name="bob", status="active", hobby="shopping")
+
+# Please note that AI was used to determine that a version of the assignment
+# was missing logger.info (line 11). The desired output was being output in the terminal, however, it needed to be in the decorator.log
