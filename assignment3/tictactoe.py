@@ -21,8 +21,21 @@ class Board:
         lines.append(f" {self.board_array[2][0]} | {self.board_array[2][1]} | {self.board_array[2][2]} \n")
         return "".join(lines)
     
-game_board = Board()
-print(f"This is the ouput: {game_board}")
+    def move(self, move_string):
+        if not move_string in Board.valid_moves:
+            raise TictactoeException("That's not a valid move.")
+        move_index = Board.valid_moves.index(move_string)
+        row = move_index // 3 # row
+        column = move_index % 3 #column
+        if self.board_array[row][column] != " ":
+            raise TictactoeException("That spot is taken.")
+        self.board_array[row][column] = self.turn
+        if self.turn == "X":
+            self.turn = "O"
+        else:
+            self.turn = "X"
+    
+print(Board())
 
 
 # Notes: 
