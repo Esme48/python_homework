@@ -7,12 +7,20 @@ class TictactoeException(Exception):
 
 class Board:
     def __init__(self):
-        self.board_array = [["" for _ in range(3)] for _ in range(3)]
+        self.board_array = [[" " for _ in range(3)] for _ in range(3)]
         self.turn = "X"
 
-        valid_moves = ["upper left", "upper center", "upper right", "middle left", "center", "middle right", "lower left", "lower center", "lower right"]
+        self.valid_moves = ["upper left", "upper center", "upper right", "middle left", "center", "middle right", "lower left", "lower center", "lower right"]
         
-
+    def __str__(self):
+        lines=[]
+        lines.append(f" {self.board_array[0][0]} | {self.board_array[0][1]} | {self.board_array[0][2]} \n")
+        lines.append("-----------\n")
+        lines.append(f" {self.board_array[1][0]} | {self.board_array[1][1]} | {self.board_array[1][2]} \n")
+        lines.append("-----------\n")
+        lines.append(f" {self.board_array[2][0]} | {self.board_array[2][1]} | {self.board_array[2][2]} \n")
+        return "".join(lines)
+    
 game_board = Board()
 print(f"This is the ouput: {game_board}")
 
