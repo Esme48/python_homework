@@ -82,12 +82,19 @@ board = Board()
 print(board)
 
 while True: 
-    board.whats_next()
+    game_over, message = board.whats_next()
+    print(message)
+
+    if game_over:
+        break 
+
     next_move = input("Enter your move: ")
     try:
         board.move(next_move)
     except TictactoeException as e:
         print(f"An error occurred: {e}")
+
+    print(board)
 
 
 # Notes: 
