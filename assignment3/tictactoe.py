@@ -78,14 +78,14 @@ class Board:
                 return (True, "O wins!")
     
 print("Welcome To Tic-Tac-Toe")
-print(Board())
+board = Board()
+print(board)
 
 while True: 
-    Board.whats_next()
-
+    board.whats_next()
+    next_move = input("Enter your move: ")
     try:
-        next_move = input("Enter your move: ")
-        Board.move(next_move)
+        board.move(next_move)
     except TictactoeException as e:
         print(f"An error occurred: {e}")
 
