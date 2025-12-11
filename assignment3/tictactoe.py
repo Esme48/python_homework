@@ -6,11 +6,10 @@ class TictactoeException(Exception):
         self.message = message
 
 class Board:
+    valid_moves = ["upper left", "upper center", "upper right", "middle left", "center", "middle right", "lower left", "lower center", "lower right"]
     def __init__(self):
         self.board_array = [[" " for _ in range(3)] for _ in range(3)]
         self.turn = "X"
-
-        self.valid_moves = ["upper left", "upper center", "upper right", "middle left", "center", "middle right", "lower left", "lower center", "lower right"]
         
     def __str__(self):
         lines=[]
@@ -34,6 +33,49 @@ class Board:
             self.turn = "O"
         else:
             self.turn = "X"
+
+    def whats_next(self):
+        cat = True
+        for i in range(3):
+            for j in range(3):
+                if self.board_array[i][j] == " ":
+                    cat = False
+                else:
+                    continue
+                break
+            else:
+                continue
+            break
+        if (cat):
+            return (True, "Cat's Game.")
+        win = False
+        for i in range(3): # check rows
+            if self.board_array[i][0] != " ":
+                if self.board_array[i][0] == self.board_array[i][1] and self.board_array[i][1] == self.board_array[i][2]:
+                    win = True
+                    break
+        if not win:
+            for i in range(3): # check columns
+                if self.board_array[0][i] != " ":
+                    if self.board_array[0][i] == self.board_array[1][i] and self.board_array[1][i] == self.board_array[2][i]:
+                        win = True
+                        break
+        if not win:
+            if self.board_array[1][1] != " ": # check diagonals
+                if self.board_array[0][0] ==  self.board_array[1][1] and self.board_array[2][2] == self.board_array[1][1]:
+                    win = True
+                if self.board_array[0][2] ==  self.board_array[1][1] and self.board_array[2][0] == self.board_array[1][1]:
+                    win = True
+        if not win:
+            if self.turn == "X": 
+                return (False, "X's turn.")
+            else:
+                return (False, "O's turn.")
+        else:
+            if self.turn == "O":
+                return (True, "X wins!")
+            else:
+                return (True, "O wins!")
     
 print(Board())
 
