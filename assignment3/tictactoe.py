@@ -77,7 +77,17 @@ class Board:
             else:
                 return (True, "O wins!")
     
+print("Welcome To Tic-Tac-Toe")
 print(Board())
+
+while True: 
+    Board.whats_next()
+
+    try:
+        next_move = input("Enter your move: ")
+        Board.move(next_move)
+    except TictactoeException as e:
+        print(f"An error occurred: {e}")
 
 
 # Notes: 
