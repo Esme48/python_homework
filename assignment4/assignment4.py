@@ -7,5 +7,5 @@ data = {
     'Age': [24, 30, 35],
     'City': ['New York', 'Los Angeles', 'Chicago']
 }
-df = pd.DataFrame(data)
-print(df)
+task1_data_frame = pd.DataFrame(data)
+print(task1_data_frame)
