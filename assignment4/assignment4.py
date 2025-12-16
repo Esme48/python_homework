@@ -43,7 +43,7 @@ with open("additional_employees.json", "w") as f:
 json_employees = pd.read_json('additional_employees.json')
 print(json_employees)
 
-more_employees = pd.merge(task1_older, json_employees)
+more_employees = pd.concat([task1_older, json_employees], ignore_index=True)
 print(more_employees)
 
 #Notes: 
