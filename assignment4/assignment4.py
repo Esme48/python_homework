@@ -71,7 +71,9 @@ clean_data.drop_duplicates(inplace=True)
 clean_data["Age"] = clean_data["Age"].replace("unknown", pd.NA)
 clean_data["Age"] = pd.to_numeric(clean_data["Age"], errors = "coerce")
 #print(clean_data)
-
+age_mean = clean_data["Age"].mean()
+clean_data["Age_mean"] = clean_data["Age"].fillna(age_mean)
+print(clean_data)
 
 #Notes: 
 #- https://www.geeksforgeeks.org/python/reading-and-writing-json-to-a-file-in-python/
