@@ -81,10 +81,22 @@ clean_data["Age"] = clean_data["Age"].fillna(age_mean)
 clean_data["Salary"] = clean_data["Salary"].fillna(salary_median)
 #print(clean_data)
 
+clean_data["Hire Date"] = clean_data["Hire Date"].str.strip()
+clean_data["Hire Date"] = clean_data["Hire Date"].str.replace("/", "-", regex=False)
 clean_data["Hire Date"] = pd.to_datetime(clean_data["Hire Date"], errors ="coerce")
+
+median_hire_date = clean_data['Hire Date'].median()
+clean_data['Hire Date'] = clean_data['Hire Date'].fillna(median_hire_date)
+
+#print(clean_data)
+
+clean_data["Name"] = clean_data["Name"].str.strip()
+clean_data["Department"] = clean_data["Department"].str.strip()
+
+clean_data["Name"] = clean_data["Name"].str.upper()
+clean_data["Department"] = clean_data["Department"].str.upper()
+
 print(clean_data)
-
-
 
 #Notes: 
 #- https://www.geeksforgeeks.org/python/reading-and-writing-json-to-a-file-in-python/
