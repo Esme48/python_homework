@@ -12,7 +12,7 @@ print(task1_data_frame)
 
 task1_with_salary = task1_data_frame.copy()
 
-salary = ['70000', '80000', '90000']
+salary = [70000, 80000, 90000]
 task1_with_salary['Salary'] = salary
 print(task1_with_salary)
 
