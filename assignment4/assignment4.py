@@ -52,6 +52,9 @@ more_employees = pd.concat([task1_older, json_employees], ignore_index=True)
 first_three = more_employees.head(3)
 print(first_three)
 
+last_two = more_employees.tail(2)
+print(last_two)
+
 
 
 
