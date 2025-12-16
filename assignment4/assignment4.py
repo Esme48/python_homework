@@ -23,4 +23,6 @@ print(task1_older)
 task1_older.to_csv("employees.csv", index=False)
 
 
-
+#Task 2
+task2_employees = pd.read_csv('employees.csv')
+print(task2_employees)
