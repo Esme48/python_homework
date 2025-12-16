@@ -56,10 +56,16 @@ last_two = more_employees.tail(2)
 #print(last_two)
 
 employee_shape = more_employees.shape
-print(employee_shape)
+#print(employee_shape)
 
 more_employees.info()
 
+#Task 4
+
+dirty_data = pd.read_csv('dirty_data.csv')
+#print(dirty_data)
+clean_data = dirty_data.copy()
+print(clean_data)
 
 
 #Notes: 
