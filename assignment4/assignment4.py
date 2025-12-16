@@ -58,6 +58,8 @@ last_two = more_employees.tail(2)
 employee_shape = more_employees.shape
 print(employee_shape)
 
+more_employees.info()
+
 
 
 #Notes: 
