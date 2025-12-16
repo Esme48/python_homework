@@ -17,3 +17,4 @@ task1_with_salary['Salary'] = salary
 print(task1_with_salary)
 
 task1_older = task1_with_salary.copy()
+task1_older.loc[task1_older['age'] + 1]
