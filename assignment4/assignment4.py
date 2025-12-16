@@ -4,7 +4,7 @@ import pandas as pd
 
 data = {
     'Name': ['Alice', 'Bob', 'Charlie'],
-    'Age': [24, 30, 35],
+    'Age': [25, 30, 35],
     'City': ['New York', 'Los Angeles', 'Chicago']
 }
 task1_data_frame = pd.DataFrame(data)
