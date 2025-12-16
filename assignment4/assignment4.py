@@ -43,6 +43,9 @@ with open("additional_employees.json", "w") as f:
 json_employees = pd.read_json('additional_employees.json')
 print(json_employees)
 
+more_employees = pd.merge(task1_older, json_employees)
+print(more_employees)
+
 #Notes: 
 #- https://www.geeksforgeeks.org/python/reading-and-writing-json-to-a-file-in-python/
 # Create a JSON file (additional_employees.json). The file adds two new employees. Eve, who is 28, lives in Miami, and has a salary of 60000, and Frank, who is 40, lives in Seattle, and has a salary of 95000.
