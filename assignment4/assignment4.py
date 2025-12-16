@@ -67,7 +67,10 @@ dirty_data = pd.read_csv('dirty_data.csv')
 clean_data = dirty_data.copy()
 #print(clean_data)
 clean_data.drop_duplicates(inplace=True)
-print(clean_data)
+#print(clean_data)
+clean_data["Age"] = clean_data["Age"].replace("unknown", pd.NA)
+clean_data["Age"] = pd.to_numeric(clean_data["Age"], errors = "coerce")
+#print(clean_data)
 
 
 #Notes: 
