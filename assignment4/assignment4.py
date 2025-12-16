@@ -71,6 +71,9 @@ clean_data.drop_duplicates(inplace=True)
 clean_data["Age"] = clean_data["Age"].replace("unknown", pd.NA)
 clean_data["Age"] = pd.to_numeric(clean_data["Age"], errors = "coerce")
 #print(clean_data)
+clean_data["Salary"] = clean_data["Salary"].replace("unknown", pd.NA)
+clean_data["Salary"] = pd.to_numeric(clean_data["Salary"], errors = "coerce")
+
 age_mean = clean_data["Age"].mean()
 salary_median = clean_data["Salary"].median()
 
