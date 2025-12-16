@@ -79,7 +79,12 @@ salary_median = clean_data["Salary"].median()
 
 clean_data["Age"] = clean_data["Age"].fillna(age_mean)
 clean_data["Salary"] = clean_data["Salary"].fillna(salary_median)
+#print(clean_data)
+
+clean_data["Hire Date"] = pd.to_datetime(clean_data["Hire Date"], errors ="coerce")
 print(clean_data)
+
+
 
 #Notes: 
 #- https://www.geeksforgeeks.org/python/reading-and-writing-json-to-a-file-in-python/
