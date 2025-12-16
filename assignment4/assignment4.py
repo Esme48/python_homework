@@ -65,8 +65,11 @@ more_employees.info()
 dirty_data = pd.read_csv('dirty_data.csv')
 #print(dirty_data)
 clean_data = dirty_data.copy()
+#print(clean_data)
+clean_data.drop_duplicates(inplace=True)
 print(clean_data)
 
 
 #Notes: 
 #- https://www.geeksforgeeks.org/python/reading-and-writing-json-to-a-file-in-python/
+#-https://www.geeksforgeeks.org/pandas/python-pandas-dataframe-drop_duplicates/
