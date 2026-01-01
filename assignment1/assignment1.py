@@ -119,21 +119,25 @@ print(hangman("Thank you for coming", "aing"))
 
 # Task 10
 
-def pig_latin(x):
-    vowels = ("aeiou")
-    #constants = ("b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z")
+def pig_latin(sentence):
+    vowels = "aeiou"
+    words = sentence.split()
+    result = []
 
+    for word in words:
+        if word.startswith("qu"):
+            result.append(word[2:] + "quay")
+        elif word[0] in vowels:
+            result.append(word + "ay")
+        else:
+            for i, letter in enumerate(word):
+                if letter in vowels:
+                    result.append(word[i:] + word[:i] + "ay")
+                    break
+            else:
+                result.append(word + "ay")  
 
-    if x.startswith("qu"):
-        return x[2:] + "quay"
-    elif x[0] in vowels:
-        return x + "ay"
-    else:
-        for i, letter in enumerate(x):
-            if letter in vowels:
-                return x[i:] + x[:i] + "ay"
+    return " ".join(result)
 
-            return x + "ay"
-
-print(pig_latin("bapple"))
+print(pig_latin("welcome to my kitchen"))
     
