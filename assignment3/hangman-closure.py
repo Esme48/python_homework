@@ -7,7 +7,8 @@ def make_hangman(secret_word):
         if letter not in guesses:
             guesses.append(letter)
         output_value = " ".join([value if value in guesses else "_" for value in secret_word])
-        return f"Word So Far: {output_value}"
+        print(f"Word So Far: {output_value}")
+        return all(value in guesses for value in secret_word)
     return hangman_closure
 
 
