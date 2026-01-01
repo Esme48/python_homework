@@ -12,3 +12,15 @@ function: other_func, positional parameters: (), keyword parameters: {'name': 'b
 function: string_func, positional parameters: (), keyword parameters: {}
 function: positional_func, positional parameters: ('Iris', 3), keyword parameters: {}
 function: other_func, positional parameters: (), keyword parameters: {'name': 'bob', 'status': 'active', 'hobby': 'shopping'}
+function: string_func, positional parameters: (), keyword parameters: {}
+return: None
+function: positional_func, positional parameters: ('Iris', 3), keyword parameters: {}
+return: True
+function: other_func, positional parameters: (), keyword parameters: {'name': 'bob', 'status': 'active', 'hobby': 'shopping'}
+return: <function logger_decorator at 0x000001BFC9EC3F60>
+function: string_func, positional parameters: (), keyword parameters: {}
+return: None
+function: positional_func, positional parameters: ('Iris', 3), keyword parameters: {}
+return: True
+function: other_func, positional parameters: (), keyword parameters: {'name': 'bob', 'status': 'active', 'hobby': 'shopping'}
+return: <function logger_decorator at 0x000002BD719F3F60>

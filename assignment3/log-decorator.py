@@ -11,6 +11,7 @@ def logger_decorator(func):
         logger.info(f"function: {func.__name__}, positional parameters: {args}, keyword parameters: {kwargs}")
         #print(f"function: {func.__name__}, positional parameters")
         result = func(*args, **kwargs)
+        logger.info(f"return: {result}")
         return result
     return wrapper
 
